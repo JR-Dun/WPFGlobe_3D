@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPF3DGlobe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF3DGlobe"
+        mc:Ignorable="d"
+        Title="3D地球仪" Height="350" Width="350" 
+        WindowStartupLocation="CenterScreen" 
+        Loaded="MainWindow_Loaded" KeyDown="MainWindow_KeyDown">
+    <Grid Background="#000000" MouseMove="MainViewport3D_MouseMove">
+        <Viewport3D Name="MainViewport3D" MouseDown="MainViewport3D_MouseDown" MouseMove="MainViewport3D_MouseMove" MouseUp="MainViewport3D_MouseUp" />
+
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Button Name="buttonUp" Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" Click="buttonUp_Click">
+                <Label Content="↑" Foreground="#ffffff" FontSize="12" Padding="5,1" BorderThickness="1" BorderBrush="White" VerticalAlignment="Center" Width="18"></Label>
+            </Button>
+
+            <StackPanel Orientation="Horizontal" Margin="5,1,5,5">
+                <Button Name="buttonLeft" Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" Click="buttonLeft_Click">
+                    <Label Content="←" Foreground="#ffffff" FontSize="12" Padding="2,1" BorderThickness="1" BorderBrush="White" VerticalAlignment="Center" Width="18"></Label>
+                </Button>
+                <Button Name="buttonDown" Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" Margin="1,0" Click="buttonDown_Click">
+                    <Label Content="↓" Foreground="#ffffff" FontSize="12" Padding="5,1" BorderThickness="1" BorderBrush="White" VerticalAlignment="Center" Width="18"></Label>
+                </Button>
+                <Button Name="buttonRight" Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" Click="buttonRight_Click">
+                    <Label Content="→" Foreground="#ffffff" FontSize="12" Padding="2,1" BorderThickness="1" BorderBrush="White" VerticalAlignment="Center" Width="18"></Label>
+                </Button>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Window>
